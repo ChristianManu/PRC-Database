@@ -12,7 +12,7 @@ $nurse_aid_id = 0;
 $first_name = "";
 $last_name = "";
 $email = "";
-$date_added = "";
+$birthdate = "";
 $set_id = 0;
 $unit_manager_id=0;
 $cert_id = 0;
@@ -31,6 +31,7 @@ if (isset($_GET['edit'])) {
     $first_name = $n['first_name'];
     $last_name = $n['last_name'];
     $email = $n['email'];
+    $birthdate = $n['birthdate'];
     $set_id = $n['set_id'];
     $cert_id = $n['cert_id'];
   }
@@ -116,11 +117,19 @@ header('location: Nurse-Aides.php');
       <label for="email">Email Address </label><br>
       <input type="text" id="email" name="email" value="<?php echo $email; ?>" ><br><br>
 
-      <label for="birthdate"> Date Added </label><br>
-      <input type="text" id="date_added" name="date_added" value="<?php echo $date_added; ?>"><br><br>
+      <label for="birthdate"> Birthdate (yyyy-mm-dd) </label><br>
+      <input type="date" id="birthdate" name="birthdate" value="<?php echo $birthdate; ?>"><br><br>
 
-      <label for="set"> SET </label><br>
-      <input type="number" id="set_ID" name="set_id" value="<?php echo $set_id; ?>"><br><br>
+      <label for="set">Set</label><br>
+      <select id="set_id" name="set_id">
+        <option value=0></option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+      </select><br><br>
 
       <label for="certification">Cerfication</label><br>
       <select id="cert_id" name="cert_id" value="<?php echo $cert_id; ?>">
@@ -140,6 +149,7 @@ header('location: Nurse-Aides.php');
          $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
          $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
          $email = mysqli_real_escape_string($link, $_REQUEST['email']);
+            $birthdate = mysqli_real_escape_string($link, $_REQUEST['birthdate']);
          $set_id = mysqli_real_escape_string($link, $_REQUEST['set_id']);
          $cert_id = mysqli_real_escape_string($link, $_REQUEST['cert_id']);
 
@@ -155,7 +165,7 @@ header('location: Nurse-Aides.php');
          }
 
         //Attempt query
-       $sql = "UPDATE NurseAids SET first_name='$first_name', last_name='$last_name', email='$email', unit_manager_id=$unit_manager_id, set_id=$set_id, cert_id=$cert_id WHERE nurse_aid_id=$nurse_aid_id";
+       $sql = "UPDATE NurseAids SET first_name='$first_name', last_name='$last_name', email='$email', birthdate='$birthdate', unit_manager_id=$unit_manager_id, set_id=$set_id, cert_id=$cert_id WHERE nurse_aid_id=$nurse_aid_id";
        if(mysqli_query($link, $sql)){
            echo "Nurse Aide Saved";
 

@@ -12,6 +12,7 @@ if($link === false){
 $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
 $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$birthdate = mysqli_real_escape_string($link, $_REQUEST['birthdate']);
 $set_id = mysqli_real_escape_string($link, $_REQUEST['set_id']);
 $cert_id = mysqli_real_escape_string($link, $_REQUEST['cert_id']);
 
@@ -27,7 +28,9 @@ else {
   //do nothing
 }
 
-$sql = "INSERT INTO Nurses (first_name, last_name, email, set_id, cert_id, unit_manager_id) VALUES ('$first_name', '$last_name', '$email',  $set_id, $cert_id, $unit_manager_id)";
+
+
+$sql = "INSERT INTO Nurses (first_name, last_name, email, birthdate, set_id, cert_id, unit_manager_id) VALUES ('$first_name', '$last_name', '$email', '$birthdate',  $set_id, $cert_id, $unit_manager_id)";
 if(mysqli_query($link, $sql)){
     echo "Nurse Saved";
     header("location: Nurses.php");

@@ -11,6 +11,7 @@ if($link === false){
 // Escape user inputs for security
 $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
 $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
+$date_admitted = mysqli_real_escape_string($link, $_REQUEST['date_admitted']);
 $room_num = mysqli_real_escape_string($link, $_REQUEST['room_num']);
 $bath_time = mysqli_real_escape_string($link, $_REQUEST['bath_time']);
 $med_id = mysqli_real_escape_string($link, $_REQUEST['med_id']);
@@ -29,7 +30,7 @@ else {
 }
 // Attempt insert query execution
 
-$sql = "INSERT INTO Patients (first_name, last_name, room_num, bath_time, med_id, set_id, unit_id) VALUES ('$first_name', '$last_name', $room_num,  '$bath_time', $med_id, $set_id, $unit_id)";
+$sql = "INSERT INTO Patients (first_name, last_name, date_admitted, room_num, bath_time, med_id, set_id, unit_id) VALUES ('$first_name', '$last_name', '$date_admitted', $room_num,  '$bath_time', $med_id, $set_id, $unit_id)";
 if(mysqli_query($link, $sql)){
     echo "Patient Saved";
     header("location: Patients.php");

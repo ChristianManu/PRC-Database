@@ -64,7 +64,7 @@ header('location: Patients.php');
 
 <body>
 <?php $results = mysqli_query($link, "SELECT * FROM Patients"); ?>
-<?php $medication = mysqli_query($link, "SELECT * FROM Medications WHERE med_id = $med_id"); ?>
+
   <h1>Patients</h1>
 
     <a href="logout.php">
@@ -123,8 +123,8 @@ header('location: Patients.php');
       <label for="lname">Last name</label><br>
       <input type="text" id="last_name" name="last_name" value="<?php echo $last_name; ?>" ><br><br>
 
-      <label for="date_admitted"> Date Admitted </label><br>
-      <input type="text" id="date_admitted" name="date_admitted" value="<?php echo $date_admitted; ?>"><br><br>
+      <label for="date_admitted"> Date Admitted (yyyy-mm-dd) </label><br>
+      <input type="date" id="date_admitted" name="date_admitted" value="<?php echo $date_admitted; ?>"><br><br>
 
       <label for="room_num"> Room Number </label><br>
       <input type="number" id="room_num" name="room_num" value="<?php echo $set_id; ?>"><br><br>
@@ -151,9 +151,16 @@ header('location: Patients.php');
         <option value=10>Cozaar</option>
       </select><br><br>
 
-      <label for="set"> Set </label><br>
-      <input type="number" id="set_ID" name="set_id" value="<?php echo $set_id; ?>"><br><br>
-
+       <label for="set">Set</label><br>
+        <select id="set_id" name="set_id">
+          <option value=0></option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+          <option value=5>5</option>
+          <option value=6>6</option>
+        </select><br><br>
 
       <input type="hidden" name="patient_id" value="<?php echo $patient_id;?>">
 
@@ -176,7 +183,7 @@ header('location: Patients.php');
 
 
         //Attempt query
-       $sql = "UPDATE Patients SET first_name='$first_name', last_name='$last_name', room_num=$room_num, bath_time='$bath_time', med_id=$med_id, set_id=$set_id WHERE patient_id=$patient_id";
+       $sql = "UPDATE Patients SET first_name='$first_name', last_name='$last_name', date_admitted='$date_admitted' room_num=$room_num, bath_time='$bath_time', med_id=$med_id, set_id=$set_id WHERE patient_id=$patient_id";
        if(mysqli_query($link, $sql)){
            echo "Patient Saved";
 

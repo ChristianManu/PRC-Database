@@ -38,8 +38,16 @@
           <input type="date" id="date_added" name="date_added"><br><br>
 
 
-          <label for="set"> Set </label><br>
-          <input type="number" id="set_ID" name="set_id"><br><br>
+          <label for="set">Set</label><br>
+          <select id="set_id" name="set_id">
+            <option value=0></option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+          </select><br><br>
 
           <label for="certification">Cerfication</label><br>
           <select id="cert_id" name="cert_id">

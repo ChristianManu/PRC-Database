@@ -34,13 +34,21 @@
           <label for="email">Email Address</label><br>
           <input type="email" id="email" name="email"><br><br>
 
-          <label for="birthdate"> Date Added </label><br>
+          <label for="birthdate"> Birthdate (yyyy-mm-dd) </label><br>
           <input type="date" id="birthdate" name="birthdate"><br><br>
 
 
 
-          <label for="set"> Set </label><br>
-          <input type="number" id="set_ID" name="set_id"><br><br>
+          <label for="set">Set</label><br>
+          <select id="set_id" name="set_id">
+            <option value=0></option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+          </select><br><br>
 
           <label for="certification">Cerfication</label><br>
           <select id="cert_id" name="cert_id">
