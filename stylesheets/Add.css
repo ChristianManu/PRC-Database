@@ -1,0 +1,49 @@
+h1{
+  float: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.flex-container2{
+  display: flex;
+  justify-content: center;
+  align-items: : center;
+}
+.fname{
+
+}
+.space1{
+    margin: 10px 30px;
+
+}
+
+.email{
+  flex-direction: column;
+
+  margin: 10px 60px;
+}
+
+.birthdate{
+  margin: 10px 60px;
+
+}
+.cert{
+  flex-direction: row;
+
+  margin: 10px 60px;
+}
+
+.unit{
+  flex-direction: row;
+
+  margin: 10px 60px;
+}
+.logout {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    float: right;
+}

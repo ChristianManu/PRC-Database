@@ -1,0 +1,53 @@
+h1{
+  float: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.flex-container2{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.button {
+  padding: 20px 45px;
+  font-size: 20px;
+  margin: 10px 60px;
+ }
+.search:hover {
+  background-color: white;
+  border: 50px solid #4CAF50;
+  box-shadow: 5px 10px, 5px 10px;
+
+}
+
+.add:hover {
+  background-color: white;
+  border: 50px solid #008CBA;
+  box-shadow: 5px 10px, 5px 10px;
+
+}
+
+.update:hover {
+  background-color: white;
+  border: 50px solid #f44336;
+  box-shadow: 5px 10px, 5px 10px;
+
+}
+
+.delete:hover {
+  background-color: white;
+  border: 50px solid #e7e7e7;
+  box-shadow: 5px 10px, 5px 10px;
+
+}
+.logout {
+float: right;
+  background-color: white;
+  color: black;
+
+}

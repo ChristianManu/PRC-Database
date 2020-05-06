@@ -1,0 +1,124 @@
+body {
+
+
+    font-size: 20px;
+    background-color: #00477f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+    color: #fff;
+}
+table{
+    width: 50%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+tr {
+    border-bottom: 1px solid #cbcbcb;
+}
+h3{
+  text-align: center;
+}
+th, td{
+    border: none;
+    height: 30px;
+    padding: 2px;
+}
+tr:hover {
+    background: #000;
+}
+
+form {
+    width: 45%;
+    margin: 50px auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.btn {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background: #5f74a0;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover{
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background: #5f6aa0;
+  border: none;
+  border-radius: 5px;
+}
+.logout_btn {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    float: right;
+}
+.back_btn {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    float: right;
+}
+.edit_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #2E8B57;
+    color: white;
+    border-radius: 3px;
+}
+
+.del_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px;
+    background: #800000;
+}
+.msg {
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: #3c763d;
+    background: #dff0d8;
+    border: 1px solid #3c763d;
+    width: 50%;
+    text-align: center;
+}

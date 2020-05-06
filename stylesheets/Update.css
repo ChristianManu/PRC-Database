@@ -1,0 +1,31 @@
+h1{
+  float: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.name{
+  display: flex;
+  flex-direction: row;
+  margin: 10px, 60px;
+}
+.nameI{
+  display: flex;
+  flex-direction: row;
+}
+.flex-container2{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.logout {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    float: right;
+}
